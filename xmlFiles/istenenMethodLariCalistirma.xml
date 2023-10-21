@@ -1,0 +1,27 @@
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd" >
+
+<!--
+Eğer birden fazla seçim yapmak istiyorsak
+hiyeraşiye uygun olmak şartıyla istediğimiz kadar kırılım yapabiliriz.
+
+include==> belirttiğimiz testleri çalıştırır.
+exclude==> belirttiğimiz test dışındaki tüm testleri çalıştırır.
+-->
+
+<suite name="istenen methodlari calistirma">
+    <test name="e2e testi">
+        <classes>
+            <class name="tests.day15_testNGFramework.C01_Priority">
+                <methods>
+                    <exclude name="carpmaTesti"></exclude>
+                </methods>
+            </class>
+            <class name="tests.day16_testNG_framework.C05_QualityDemy_NegatifLogin">
+                <methods>
+                    <include name="gecersizPasswordTest"></include>
+                    <include name="gecersizEmailTesti"></include>
+                </methods>
+            </class>
+        </classes>
+    </test>
+</suite>
